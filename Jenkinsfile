@@ -6,7 +6,7 @@ node {
 
         def customImage = docker.build("usm87/dockerwebapp")
 
-        /* Push the container to the custom Registry */
+        /* Push the Image to the custom Registry */
         customImage.push()
     }
 }

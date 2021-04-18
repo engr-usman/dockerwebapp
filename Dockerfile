@@ -8,9 +8,12 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
+RUN apt install -y git
+
 RUN npm install
 # If you are building your code for production
-# RUN npm install --only=production
+RUN npm install --only=production
+#RUN npm install -g yarn
 
 # Bundle app source
 COPY . .
